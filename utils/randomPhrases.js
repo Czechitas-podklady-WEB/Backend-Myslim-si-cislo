@@ -1,0 +1,15 @@
+export const randomPhrases = [
+	'modré nekonečno',
+	'mokrá sušička',
+	'tupý střep',
+	'slepý malíř',
+	'lačný koncentrát',
+	'těžké pírko',
+	'lehká skála',
+	'čokoládový sněhulák',
+	'spolehlivý sytič',
+	'velká skulina',
+	'černá záře',
+	'mrazivé teplo',
+	'slaný med',
+]

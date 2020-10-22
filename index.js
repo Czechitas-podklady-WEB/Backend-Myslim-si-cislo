@@ -1,6 +1,7 @@
 import cors from 'cors'
 import express from 'express'
 import { cyrb53 } from './utils/cyrb53.js'
+import { randomPhrases } from './utils/randomPhrases.js'
 
 const app = express()
 app.use(express.urlencoded({ extended: true }))
@@ -21,9 +22,8 @@ const createNumber = (min, max, id) => {
 }
 
 const createPassword = (min, max, id) => {
-	const passwords = ['ryba', 'lachtan']
-	const index = createNumber(0, passwords.length - 1, `${min}-${max}-${id}`)
-	return passwords[index]
+	const index = createNumber(0, randomPhrases.length - 1, `${min}-${max}-${id}`)
+	return randomPhrases[index]
 }
 
 app.set('view engine', 'pug')
