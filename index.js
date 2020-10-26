@@ -66,13 +66,13 @@ app.get('/nahodne-cislo/od/:from/do/:to/id/:id/', (request, response) => {
 
 	if (guess < target) {
 		response.send({
-			message: 'Myslím si větší číslo. 👆 Zkus to znovu.',
+			message: `Myslím si větší číslo než ${guess}. Zkus to znovu.`,
 			code: 'GUESS_TOO_LOW',
 			...limits,
 		})
 	} else {
 		response.send({
-			message: 'Myslím si menší číslo. 👇 Zkus to znovu.',
+			message: `Myslím si menší číslo než ${guess}. Zkus to znovu.`,
 			code: 'GUESS_TOO_HIGH',
 			...limits,
 		})
